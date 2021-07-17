@@ -18,28 +18,57 @@
     }
 
     // Regular
+    console.log('hello');
 
     // Interpolated
+    console.log('hello i am a %s string!', 'poop');
 
     // Styled
+    // console.log('%c I am some great text', 'font-size: 50px; background: red; text-shadow: 10px 10px 0 blue;');
 
     // warning!
 
+    console.warn('oh poop');
+
     // Error :|
+    console.error('AHHHHHHHHHHHH FIREEEE');
 
     // Info
+    console.info('The average human farts 7 times a day.');
 
     // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'That is wrong!')
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
-
+    console.log(p);
+    console.dir(p);
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`this is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old!`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old!`);
+      console.groupEnd(`${dog.name}`);
+    });
     // counting
 
+    console.count('Chris');
+    console.count('Chris');
+    console.count('Chris');
+    console.count('Chris');
+    console.count('Chris');
+    console.count('Chris');
+
+
     // timing
+    console.time('Fetching data');
+    // do stuff inbetween and you can time how long it takes to complete something
+    console.timeEnd('Fetching data');
 
   </script>
 </body>
